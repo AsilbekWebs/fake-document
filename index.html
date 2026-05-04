@@ -3,89 +3,271 @@
 <head>
 <meta charset="UTF-8">
 <title>DMED Documents</title>
+
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+    background: #ffff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.logo-sub {
+    font-size: 16px;
+    color: #3b82f6;
+}
+
+/* LANG */
+.lang {
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    background: white;
+}
+
+/* MAIN */
+.container {
+    text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* PIN INPUT */
+.pin {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pin input {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 22px;
+    outline: none;
+}
+
+.pin input:focus {
+    border-color: #2563eb;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 25px;
+}
+
+.btn button {
+    width: 200px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    background: #e5e7eb;
+    color: #9ca3af;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* HELP BLOCK */
+.help {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.help-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.help img {
+    width: 140px;
+    padding-top: 300x;
+    margin:0 auto;
+}
+
+.help-text {
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+}
+
+.pin-demo {
+    margin-top: 10px;
+    display: inline-block;
+    background: #bfdbfe;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.helper{
+    width: 500px;
+    margin:0 auto;
+    margin-top: 120px;
+}
+
+/* ================== TABLET ================== */
+@media (max-width: 1024px) {
+    .logo img {
+        width: 200px;
     }
 
-    .container {
-        text-align: center;
+    .title {
+        font-size: 22px;
+    }
+
+    .helper {
+        width: 400px;
         margin-top: 80px;
     }
+}
 
-    .logo {
-        font-size: 28px;
-        font-weight: bold;
-        color: #2b6cb0;
+/* ================== MOBILE ================== */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 20px;
     }
 
-    .logo span {
-        color: #4fd1c5;
-    }
-
-    h2 {
-        margin-top: 40px;
-        font-weight: 500;
-    }
-
-    .pin-box {
-        margin-top: 20px;
-    }
-
-    input {
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-        font-size: 22px;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-    }
-
-    button {
-        margin-top: 20px;
-        padding: 12px 40px;
-        font-size: 16px;
-        border: none;
-        border-radius: 6px;
-        background: #ddd;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #ccc;
+    .logo img {
+        width: 150px;
     }
 
     .lang {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        border: 1px solid #ccc;
-        padding: 6px 12px;
-        border-radius: 20px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .pin input {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .btn button {
+        width: 160px;
+        height: 40px;
         font-size: 14px;
     }
+
+    .helper {
+        width: 90%;
+        margin-top: 60px;
+    }
+}
+
+/* ================== SMALL MOBILE ================== */
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 120px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .pin {
+        gap: 8px;
+    }
+
+    .pin input {
+        width: 40px;
+        height: 40px;
+    }
+
+    .helper {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<div class="lang">🇷🇺 Русский</div>
+
 
 <div class="container">
-    <div class="logo"><span>*</span> DMED Documents</div>
-
-    <h2>Введите PIN-код для<br>просмотра документа</h2>
-
-    <div class="pin-box">
-        <input type="text" maxlength="1" id="p1">
-        <input type="text" maxlength="1" id="p2">
-        <input type="text" maxlength="1" id="p3">
-        <input type="text" maxlength="1" id="p4">
+    <div class="header">
+    <div class="logo">
+        <img src="logo.png">
     </div>
 
-    <button onclick="checkPin()">Открыть</button>
+    <div class="lang">🇷🇺 Русский</div>
+</div>
+    <div class="title">
+        Введите PIN-код для<br>
+        просмотра документа
+    </div>
+
+    <div class="pin">
+        <input maxlength="1" id="p1">
+        <input maxlength="1" id="p2">
+        <input maxlength="1" id="p3">
+        <input maxlength="1" id="p4">
+    </div>
+
+    <div class="btn">
+        <button onclick="checkPin()">Открыть</button>
+    </div>
+        <img class="helper" src="pods.png">
+
+</div>
+
+
+       
+
 </div>
 
 <script>
